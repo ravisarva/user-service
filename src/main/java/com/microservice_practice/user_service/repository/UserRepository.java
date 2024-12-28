@@ -7,7 +7,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 
 public interface UserRepository extends JpaRepository<User, Integer> {
-
-	// input username output is user
 	Optional<User> findByCredentialUsername(String username);
 }

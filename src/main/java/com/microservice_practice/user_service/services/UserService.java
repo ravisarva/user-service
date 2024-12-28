@@ -15,6 +15,7 @@ public interface UserService {
     UserDto findById(Integer userId);
     List<UserDto> findAll();
     UserDto update(Integer userId, UserDto userDto);
-    void deletedById(Integer userId);
+    void deleteById(Integer userId);
+    UserDto findByUsername(String username);
 
 }

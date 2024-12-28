@@ -60,4 +60,76 @@ public class Credential implements Serializable{
 	@OneToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name="user_id",nullable = false)
 	private User user;
+
+	public Integer getCredentialId() {
+		return credentialId;
+	}
+
+	public void setCredentialId(Integer credentialId) {
+		this.credentialId = credentialId;
+	}
+
+	public String getUsername() {
+		return username;
+	}
+
+	public void setUsername(String username) {
+		this.username = username;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public RoleBasedAuthrority getRoleBasedAuthrority() {
+		return roleBasedAuthrority;
+	}
+
+	public void setRoleBasedAuthrority(RoleBasedAuthrority roleBasedAuthrority) {
+		this.roleBasedAuthrority = roleBasedAuthrority;
+	}
+
+	public Boolean getEnabled() {
+		return isEnabled;
+	}
+
+	public void setEnabled(Boolean enabled) {
+		isEnabled = enabled;
+	}
+
+	public Boolean getAccountNonExpired() {
+		return isAccountNonExpired;
+	}
+
+	public void setAccountNonExpired(Boolean accountNonExpired) {
+		isAccountNonExpired = accountNonExpired;
+	}
+
+	public Boolean getAccountNonLocked() {
+		return isAccountNonLocked;
+	}
+
+	public void setAccountNonLocked(Boolean accountNonLocked) {
+		isAccountNonLocked = accountNonLocked;
+	}
+
+	public Boolean getCredentailsNonExpired() {
+		return isCredentailsNonExpired;
+	}
+
+	public void setCredentailsNonExpired(Boolean credentailsNonExpired) {
+		isCredentailsNonExpired = credentailsNonExpired;
+	}
+
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
+	}
 }

@@ -13,15 +13,15 @@ public interface UserMappingHelper {
         if(user == null) {
             return null;
         }
-//        UserDto useDto = new UserDto();
-//        BeanUtils.copyProperties(user, useDto);
-//
-//        if(user.getCredential() != null) {
-//            CredentialDto credentialDto = new CredentialDto();
-//            BeanUtils.copyProperties(user.getCredential(), credentialDto);
-//            useDto.setCredentialDto(credentialDto);
-//        }
-        return null;
+        UserDto userDto = new UserDto();
+        BeanUtils.copyProperties(user, userDto);
+
+        if(user.getCredential() != null) {
+            CredentialDto credentialDto = new CredentialDto();
+            BeanUtils.copyProperties(user.getCredential(), credentialDto);
+            userDto.setCredentialDto(credentialDto);
+        }
+        return userDto;
     }
 
     public static User map(UserDto userDto) {
